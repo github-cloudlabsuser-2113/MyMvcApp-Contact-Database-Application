@@ -27,6 +27,7 @@ jobs:
       - name: Build with dotnet
         run: |
           dir
+          cd MymvcApp-Contact-Database-Application
           dotnet build --configuration Release
 
       - name: dotnet publish
