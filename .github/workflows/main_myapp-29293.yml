@@ -26,12 +26,13 @@ jobs:
 
       - name: Build with dotnet
         run: |
-          dir
-          cd MymvcApp-Contact-Database-Application
+          cd MyMvcApp-Contact-Database-Application
           dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o D:\a\MyMvcApp-Contact-Databse-Application\MyMvcApp-Contact-Databse-Application\bin\Release\net8.0\MyMvcApp
+        run: |
+          cd MyMvcApp-Contact-Database-Application
+          dotnet publish -c Release -o D:\a\MyMvcApp-Contact-Databse-Application\MyMvcApp-Contact-Databse-Application\bin\Release\net8.0\MyMvcApp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
